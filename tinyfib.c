@@ -30,9 +30,9 @@ enum ExitStatus {
 };
 
 int main(int argc, char *argv[]) {
-  long f = 0;
-  long f0;
-  long l = 1;
+  double f = 0;
+  double f0;
+  double l = 1;
 
   if (argc != 2) {
     printf("tinyfib\n");
@@ -41,10 +41,10 @@ int main(int argc, char *argv[]) {
     return E_FUCKED;
   }
 
-  printf("%ld\n", l);
+  printf("%.0lf\n", l);
 
   for (int i = 1; i < atoi(argv[1]); i++) {
-    printf("%ld\n", f+l);
+    printf("%.0lf\n", f+l);
     f0 = f;
     f = l;
     l = f0 + l;
